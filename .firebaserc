@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chat-app-ad2a5": {
+      "hosting": {
+        "chatapp": [
+          "chat-app-ad2a5"
+        ]
+      }
+    }
+  }
+}

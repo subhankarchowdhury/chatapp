@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>ChatBox</span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #snav>
+        <p>TBD</p>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

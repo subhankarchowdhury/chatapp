@@ -1,0 +1,28 @@
+.user-card{
+    margin: 20px;
+}
+
+.user-action{
+    float: right;
+}
+
+mat-card-content, mat-card-actions{
+    margin-left: 12px;
+}
+
+.contact-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    margin: 25px;
+}
+.contact-title {
+	flex-grow: 1;
+}
+.add-user {
+	flex-grow: 1;
+}
+
+#spacer{
+    flex-grow: 7;
+}
