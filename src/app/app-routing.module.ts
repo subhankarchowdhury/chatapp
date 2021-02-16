@@ -12,7 +12,7 @@ const routes: Routes = [
     path:'edit', component: EdituserComponent
   },
   {
-    path:'', component: UserlistComponent
+    path:'**', component: UserlistComponent
   }
 ];
 

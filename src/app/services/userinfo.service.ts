@@ -22,6 +22,10 @@ export class UserinfoService {
   }
 
   updateUser(id,userinfo){
-    return this.db.collection('users').doc(id).set(userinfo)
+    this.db.collection('users').doc(id).set(userinfo)
+  }
+
+  deleteUser(id){
+    
   }
 }

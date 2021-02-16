@@ -35,14 +35,7 @@ export class UserlistComponent implements OnInit {
   }
 
   updateUser(id){
-    this.userinfoservice.getUser(id).pipe(map(userinfo =>{
-        const data = userinfo.payload.data() as Userwithoutid
-        const id = userinfo.payload.id
-        return {...data}
-     })).subscribe(res => {
-       //console.log(res);
-       this.router.navigate(['/edit'],{queryParams: {id : id}})
-     })
+    this.router.navigate(['/edit'],{queryParams: {id : id}})
   }  
 }
 

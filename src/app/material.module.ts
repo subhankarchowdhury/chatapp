@@ -4,6 +4,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
     imports:[
@@ -11,14 +12,16 @@ import {MatCardModule} from '@angular/material/card';
         MatIconModule,
         MatSidenavModule,
         MatButtonModule,
-        MatCardModule
+        MatCardModule,
+        MatDatepickerModule
     ],
     exports:[
         MatToolbarModule,
         MatIconModule,
         MatSidenavModule,
         MatButtonModule,
-        MatCardModule
+        MatCardModule,
+        MatDatepickerModule
     ]
 })
 export class MaterialModule { }

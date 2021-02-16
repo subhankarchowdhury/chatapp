@@ -1,8 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { UserinfoService } from '../services/userinfo.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
@@ -25,9 +25,7 @@ export class EdituserComponent implements OnInit {
       'phone' : new FormControl(null,  Validators.required),
       'status' : new FormControl(null,  Validators.required)
     })
-    //console.log("in com");
     
-
     this.subs = this.activatedroute.queryParams.subscribe(params =>{
       this.id = params['id']
       this.usersubs = this.userinfoservice.getUser(this.id).subscribe(res => {
@@ -51,18 +49,11 @@ export class EdituserComponent implements OnInit {
   }
 
   updateUser(){
-    
-    // this.db.collection('users').doc(this.id).update({name : this.userForm.get('name').value}).then(()=>{
-    //   this.route.navigate(['/'])
-    // })
-    // this.userinfoservice.updateUser(this.id,this.userForm.value).then(()=>{
-    //   this.route.navigate(['/add'])
-    //   console.log('updated');
-    //   this.subs.unsubscribe()
-    //   this.usersubs.unsubscribe()
-    // })
-    
+
+    this.userinfoservice.updateUser(this.id,this.userForm.value)
+    this.route.navigate(["/"])
     
   }
-
+  
+ 
 }
