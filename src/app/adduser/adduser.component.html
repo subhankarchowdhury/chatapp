@@ -59,6 +59,15 @@
                     <option [ngValue]=false>Deactivate</option>
                 </select>
             </div>
+
+            <div class="form-group">
+                
+                    <mat-label>Created at</mat-label>
+                    <input matInput [matDatepicker]="picker"  name="created"  class="form-control" formControlName="created" >
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                
+            </div>
             
 
             <button mat-raised-button 

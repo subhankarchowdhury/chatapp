@@ -23,19 +23,23 @@ export class EdituserComponent implements OnInit {
       'email' : new FormControl(null,  Validators.required),
       'country' : new FormControl(null,  Validators.required),
       'phone' : new FormControl(null,  Validators.required),
-      'status' : new FormControl(null,  Validators.required)
+      'status' : new FormControl(null,  Validators.required),
+      'created' : new FormControl(null, Validators.required)
     })
     
     this.subs = this.activatedroute.queryParams.subscribe(params =>{
       this.id = params['id']
       this.usersubs = this.userinfoservice.getUser(this.id).subscribe(res => {
         this.userData = res.payload.data()
+        console.log(this.userData.created.seconds);
+        
         this.userForm.setValue({
           name : this.userData.name,
           email : this.userData.email,
           country : this.userData.country,
           phone : this.userData.phone,
-          status : this.userData.status
+          status : this.userData.status,
+          created: new Date()                                                   
         })
       })
       

@@ -5,6 +5,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
     imports:[
@@ -13,7 +14,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
         MatSidenavModule,
         MatButtonModule,
         MatCardModule,
-        MatDatepickerModule
+        MatDatepickerModule,
+        MatFormFieldModule
     ],
     exports:[
         MatToolbarModule,
@@ -21,7 +23,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
         MatSidenavModule,
         MatButtonModule,
         MatCardModule,
-        MatDatepickerModule
+        MatDatepickerModule,
+        MatFormFieldModule
     ]
 })
 export class MaterialModule { }

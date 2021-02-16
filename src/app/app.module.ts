@@ -13,6 +13,7 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { EdituserComponent } from './edituser/edituser.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -31,9 +32,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatNativeDateModule
   ],
-  providers: [],
+  providers: [MatNativeDateModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

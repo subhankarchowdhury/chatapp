@@ -26,6 +26,6 @@ export class UserinfoService {
   }
 
   deleteUser(id){
-    
+    this.db.collection('users').doc(id).delete()
   }
 }

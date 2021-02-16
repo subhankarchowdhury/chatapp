@@ -18,7 +18,8 @@ userForm : FormGroup;
       'email' : new FormControl(null,  Validators.required),
       'country' : new FormControl(null,  Validators.required),
       'phone' : new FormControl(null,  Validators.required),
-      'status' : new FormControl(null,  Validators.required)
+      'status' : new FormControl(null,  Validators.required),
+      'created': new FormControl(null, Validators.required)
     })
   }
 
@@ -26,6 +27,8 @@ userForm : FormGroup;
   }
 
   addUser(){
+    //console.log(this.userForm.get('created').value);
+    
     this.userinfoservice.addUser(this.userForm.value)
     this.userForm.reset()
     this.route.navigate(['/'])

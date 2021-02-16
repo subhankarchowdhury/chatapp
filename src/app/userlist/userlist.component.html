@@ -15,11 +15,12 @@
             <p>Phone no: {{user.phone}}</p>
             <p>Country : {{user.country}}</p>
             <p>Status : {{user.status === true ? 'Active' : 'Deactive'}}</p>
+            <p>Created at : {{user.created.toDate() | date:'dd/MM/yyyy'}}</p>
         </mat-card-content>
         
         <mat-card-actions>
           <button mat-raised-button color="primary" (click)="updateUser(user.id)">Edit</button>
-          <button mat-raised-button color="accent">Delete</button>
+          <button mat-raised-button color="accent" (click)="deleteUser(user.id)">Delete</button>
         </mat-card-actions>
     </mat-card>    
 </div>

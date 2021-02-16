@@ -37,6 +37,12 @@ export class UserlistComponent implements OnInit {
   updateUser(id){
     this.router.navigate(['/edit'],{queryParams: {id : id}})
   }  
+
+  deleteUser(id){
+    if(confirm("Do you want to delete the contact?")){
+      this.userinfoservice.deleteUser(id)
+    }
+  }
 }
 
 
